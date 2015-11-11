@@ -17,6 +17,7 @@
 
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
@@ -27,11 +28,12 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Geolocation APP</h1>
       </ion-header-bar>
       <ion-content ng-controller="GeolocationCtrl">
-        {{teste}} <br/>
-        <input ng-model="teste" />
+        <h1>Minha localização</h1>
+         <p>latitude: {{latitude}}</p>
+         <p>longitude: {{longitude}}</p>
       </ion-content>
     </ion-pane>
   </body>
