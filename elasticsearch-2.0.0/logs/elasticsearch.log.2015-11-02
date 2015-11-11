@@ -1,0 +1,84 @@
+[2015-11-02 01:28:07,769][INFO ][node                     ] [Scourge of the Underworld] version[2.0.0], pid[1454], build[de54438/2015-10-22T08:09:48Z]
+[2015-11-02 01:28:07,770][INFO ][node                     ] [Scourge of the Underworld] initializing ...
+[2015-11-02 01:28:08,657][INFO ][plugins                  ] [Scourge of the Underworld] loaded [license, marvel], sites []
+[2015-11-02 01:28:08,758][INFO ][env                      ] [Scourge of the Underworld] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [81.9gb], net total_space [194.6gb], spins? [unknown], types [hfs]
+[2015-11-02 01:28:13,311][INFO ][node                     ] [Scourge of the Underworld] initialized
+[2015-11-02 01:28:13,312][INFO ][node                     ] [Scourge of the Underworld] starting ...
+[2015-11-02 01:28:13,615][INFO ][transport                ] [Scourge of the Underworld] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2015-11-02 01:28:13,631][INFO ][discovery                ] [Scourge of the Underworld] elasticsearch/YMNLIMyITgK28uBveZOeug
+[2015-11-02 01:28:16,695][INFO ][cluster.service          ] [Scourge of the Underworld] new_master {Scourge of the Underworld}{YMNLIMyITgK28uBveZOeug}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2015-11-02 01:28:16,754][INFO ][http                     ] [Scourge of the Underworld] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2015-11-02 01:28:16,755][INFO ][node                     ] [Scourge of the Underworld] started
+[2015-11-02 01:28:16,864][INFO ][gateway                  ] [Scourge of the Underworld] recovered [0] indices into cluster_state
+[2015-11-02 01:28:17,268][INFO ][license.plugin.core      ] [Scourge of the Underworld] license [38b61067-d4f9-4408-ab5c-179f2fe0618f] - valid
+[2015-11-02 01:28:17,271][ERROR][license.plugin.core      ] [Scourge of the Underworld] 
+#
+# License will expire on [Wednesday, December 02, 2015]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+[2015-11-02 01:28:23,964][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-2015.11.02] creating index, cause [auto(bulk api)], templates [.marvel-es], shards [1]/[1], mappings [shards, _default_, index_stats, index_recovery, cluster_state, cluster_info, cluster_stats, indices_stats, node_stats]
+[2015-11-02 01:28:24,230][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-data] creating index, cause [auto(bulk api)], templates [.marvel-es], shards [1]/[1], mappings [shards, _default_, index_stats, index_recovery, cluster_state, cluster_info, cluster_stats, indices_stats, node_stats]
+[2015-11-02 01:28:24,491][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-2015.11.02] update_mapping [cluster_stats]
+[2015-11-02 01:28:24,542][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-2015.11.02] update_mapping [node_stats]
+[2015-11-02 01:28:34,783][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-2015.11.02] update_mapping [indices_stats]
+[2015-11-02 01:28:34,809][INFO ][cluster.metadata         ] [Scourge of the Underworld] [.marvel-es-2015.11.02] update_mapping [cluster_stats]
+[2015-11-02 01:29:47,233][INFO ][node                     ] [Scourge of the Underworld] stopping ...
+[2015-11-02 01:29:47,300][INFO ][node                     ] [Scourge of the Underworld] stopped
+[2015-11-02 01:29:47,301][INFO ][node                     ] [Scourge of the Underworld] closing ...
+[2015-11-02 01:29:47,308][INFO ][node                     ] [Scourge of the Underworld] closed
+[2015-11-02 01:37:39,697][INFO ][node                     ] [Scanner] version[2.0.0], pid[1650], build[de54438/2015-10-22T08:09:48Z]
+[2015-11-02 01:37:39,699][INFO ][node                     ] [Scanner] initializing ...
+[2015-11-02 01:37:40,196][INFO ][plugins                  ] [Scanner] loaded [license, marvel], sites []
+[2015-11-02 01:37:40,284][INFO ][env                      ] [Scanner] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [81.7gb], net total_space [194.6gb], spins? [unknown], types [hfs]
+[2015-11-02 01:37:44,530][INFO ][node                     ] [Scanner] initialized
+[2015-11-02 01:37:44,530][INFO ][node                     ] [Scanner] starting ...
+[2015-11-02 01:37:44,748][INFO ][transport                ] [Scanner] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2015-11-02 01:37:44,774][INFO ][discovery                ] [Scanner] elasticsearch/8DlR_HjDRiqrLlys4e-rMQ
+[2015-11-02 01:37:47,836][INFO ][cluster.service          ] [Scanner] new_master {Scanner}{8DlR_HjDRiqrLlys4e-rMQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2015-11-02 01:37:47,902][INFO ][http                     ] [Scanner] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2015-11-02 01:37:47,903][INFO ][node                     ] [Scanner] started
+[2015-11-02 01:37:48,330][INFO ][license.plugin.core      ] [Scanner] license [38b61067-d4f9-4408-ab5c-179f2fe0618f] - valid
+[2015-11-02 01:37:48,333][ERROR][license.plugin.core      ] [Scanner] 
+#
+# License will expire on [Wednesday, December 02, 2015]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+[2015-11-02 01:37:48,361][INFO ][gateway                  ] [Scanner] recovered [2] indices into cluster_state
+[2015-11-02 01:37:54,479][INFO ][cluster.metadata         ] [Scanner] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings [config]
+[2015-11-02 01:37:57,324][INFO ][cluster.metadata         ] [Scanner] [.kibana] create_mapping [index-pattern]
+[2015-11-02 01:37:57,370][INFO ][cluster.metadata         ] [Scanner] [.kibana] update_mapping [config]
+[2015-11-02 01:39:29,382][INFO ][node                     ] [Scanner] stopping ...
+[2015-11-02 01:39:29,429][INFO ][node                     ] [Scanner] stopped
+[2015-11-02 01:39:29,430][INFO ][node                     ] [Scanner] closing ...
+[2015-11-02 01:39:29,434][INFO ][node                     ] [Scanner] closed
+[2015-11-02 21:05:12,715][INFO ][node                     ] [Zartra] version[2.0.0], pid[756], build[de54438/2015-10-22T08:09:48Z]
+[2015-11-02 21:05:12,716][INFO ][node                     ] [Zartra] initializing ...
+[2015-11-02 21:05:13,224][INFO ][plugins                  ] [Zartra] loaded [license, marvel], sites []
+[2015-11-02 21:05:13,318][INFO ][env                      ] [Zartra] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [81.6gb], net total_space [194.6gb], spins? [unknown], types [hfs]
+[2015-11-02 21:05:16,382][INFO ][node                     ] [Zartra] initialized
+[2015-11-02 21:05:16,383][INFO ][node                     ] [Zartra] starting ...
+[2015-11-02 21:05:16,515][INFO ][transport                ] [Zartra] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2015-11-02 21:05:16,529][INFO ][discovery                ] [Zartra] elasticsearch/sYLtfYLhQ9e8yu2Z-i-l_w
+[2015-11-02 21:05:19,576][INFO ][cluster.service          ] [Zartra] new_master {Zartra}{sYLtfYLhQ9e8yu2Z-i-l_w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2015-11-02 21:05:19,648][INFO ][http                     ] [Zartra] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2015-11-02 21:05:19,648][INFO ][node                     ] [Zartra] started
+[2015-11-02 21:05:20,067][INFO ][license.plugin.core      ] [Zartra] license [38b61067-d4f9-4408-ab5c-179f2fe0618f] - valid
+[2015-11-02 21:05:20,070][ERROR][license.plugin.core      ] [Zartra] 
+#
+# License will expire on [Wednesday, December 02, 2015]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+[2015-11-02 21:05:20,133][INFO ][gateway                  ] [Zartra] recovered [3] indices into cluster_state
+[2015-11-02 21:23:54,428][INFO ][node                     ] [Zartra] stopping ...
+[2015-11-02 21:23:54,518][INFO ][node                     ] [Zartra] stopped
+[2015-11-02 21:23:54,519][INFO ][node                     ] [Zartra] closing ...
+[2015-11-02 21:23:54,525][INFO ][node                     ] [Zartra] closed

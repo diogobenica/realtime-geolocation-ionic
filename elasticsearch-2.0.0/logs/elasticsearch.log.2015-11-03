@@ -1,0 +1,265 @@
+[2015-11-03 21:01:26,163][INFO ][node                     ] [Cain] version[2.0.0], pid[489], build[de54438/2015-10-22T08:09:48Z]
+[2015-11-03 21:01:26,165][INFO ][node                     ] [Cain] initializing ...
+[2015-11-03 21:01:26,699][INFO ][plugins                  ] [Cain] loaded [license, marvel], sites []
+[2015-11-03 21:01:26,781][INFO ][env                      ] [Cain] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [76.9gb], net total_space [194.6gb], spins? [unknown], types [hfs]
+[2015-11-03 21:01:29,715][INFO ][node                     ] [Cain] initialized
+[2015-11-03 21:01:29,715][INFO ][node                     ] [Cain] starting ...
+[2015-11-03 21:01:29,847][INFO ][transport                ] [Cain] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2015-11-03 21:01:29,861][INFO ][discovery                ] [Cain] elasticsearch/GNZ6u6iuQqe_306vr-b6dg
+[2015-11-03 21:01:32,914][INFO ][cluster.service          ] [Cain] new_master {Cain}{GNZ6u6iuQqe_306vr-b6dg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2015-11-03 21:01:32,949][INFO ][http                     ] [Cain] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2015-11-03 21:01:32,949][INFO ][node                     ] [Cain] started
+[2015-11-03 21:01:33,215][INFO ][license.plugin.core      ] [Cain] license [38b61067-d4f9-4408-ab5c-179f2fe0618f] - valid
+[2015-11-03 21:01:33,217][ERROR][license.plugin.core      ] [Cain] 
+#
+# License will expire on [Wednesday, December 02, 2015]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+[2015-11-03 21:01:33,242][INFO ][gateway                  ] [Cain] recovered [3] indices into cluster_state
+[2015-11-03 21:01:39,879][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.03] creating index, cause [auto(bulk api)], templates [.marvel-es], shards [1]/[1], mappings [shards, _default_, index_stats, index_recovery, cluster_state, cluster_info, cluster_stats, indices_stats, node_stats]
+[2015-11-03 21:01:40,020][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.03] update_mapping [indices_stats]
+[2015-11-03 21:01:40,054][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.03] update_mapping [node_stats]
+[2015-11-03 21:01:40,077][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.03] update_mapping [cluster_stats]
+[2015-11-03 22:20:00,804][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.04] creating index, cause [auto(bulk api)], templates [.marvel-es], shards [1]/[1], mappings [shards, _default_, index_stats, index_recovery, cluster_state, cluster_info, cluster_stats, indices_stats, node_stats]
+[2015-11-03 22:20:00,843][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.04] update_mapping [indices_stats]
+[2015-11-03 22:20:00,854][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.04] update_mapping [node_stats]
+[2015-11-03 22:20:00,863][INFO ][cluster.metadata         ] [Cain] [.marvel-es-2015.11.04] update_mapping [cluster_stats]
+[2015-11-03 23:33:34,796][INFO ][rest.suppressed          ] /test/books Params: {index=test, type=books}
+java.lang.IllegalArgumentException: No feature for name [books]
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.fromName(GetIndexRequest.java:82)
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.convertToFeatures(GetIndexRequest.java:95)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:77)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-11-03 23:33:50,335][INFO ][cluster.metadata         ] [Cain] [test] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [books]
+[2015-11-03 23:33:50,398][DEBUG][action.index             ] [Cain] [test][4], node[GNZ6u6iuQqe_306vr-b6dg], [P], v[2], s[STARTED], a[id=EWzscqaOSdqEXGD8WKvodA]: Failed to execute [index {[test][books][AVDQIO2h44BMsn75o7CS], source[_na_]}]
+MapperParsingException[failed to parse]; nested: NotXContentException[Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.compress.NotXContentException: Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes
+	at org.elasticsearch.common.compress.CompressorFactory.compressor(CompressorFactory.java:85)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:52)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:95)
+	... 13 more
+[2015-11-03 23:33:50,399][INFO ][rest.suppressed          ] /test/books Params: {index=test, type=books}
+MapperParsingException[failed to parse]; nested: NotXContentException[Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.compress.NotXContentException: Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes
+	at org.elasticsearch.common.compress.CompressorFactory.compressor(CompressorFactory.java:85)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:52)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:95)
+	... 13 more
+[2015-11-03 23:34:27,709][DEBUG][action.index             ] [Cain] [test][2], node[GNZ6u6iuQqe_306vr-b6dg], [P], v[2], s[STARTED], a[id=3663GXeUQWedvdEPZMQ72A]: Failed to execute [index {[test][books][AVDQIX9744BMsn75o7C_], source[{teste:]}]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected end-of-input within/between OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@d2a9c5a; line: 1, column: 15]];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected end-of-input within/between OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@d2a9c5a; line: 1, column: 15]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1487)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:2895)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2807)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:704)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:111)
+	... 13 more
+[2015-11-03 23:34:27,710][INFO ][rest.suppressed          ] /test/books Params: {index=test, type=books}
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected end-of-input within/between OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@d2a9c5a; line: 1, column: 15]];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected end-of-input within/between OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@d2a9c5a; line: 1, column: 15]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1487)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:2895)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2807)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:704)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:111)
+	... 13 more
+[2015-11-03 23:35:38,952][DEBUG][action.index             ] [Cain] [test][2], node[GNZ6u6iuQqe_306vr-b6dg], [P], v[2], s[STARTED], a[id=3663GXeUQWedvdEPZMQ72A]: Failed to execute [index {[test][books][AVDQIpXH44BMsn75o7EN], source[_na_]}]
+MapperParsingException[failed to parse]; nested: NotXContentException[Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.compress.NotXContentException: Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes
+	at org.elasticsearch.common.compress.CompressorFactory.compressor(CompressorFactory.java:85)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:52)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:95)
+	... 13 more
+[2015-11-03 23:35:38,952][INFO ][rest.suppressed          ] /test/books Params: {index=test, type=books}
+MapperParsingException[failed to parse]; nested: NotXContentException[Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes];
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:159)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:79)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:318)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:503)
+	at org.elasticsearch.index.shard.IndexShard.prepareCreate(IndexShard.java:494)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.prepareIndexOperationOnPrimary(TransportReplicationAction.java:1052)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.executeIndexRequestOnPrimary(TransportReplicationAction.java:1060)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:170)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.performOnPrimary(TransportReplicationAction.java:579)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase$1.doRun(TransportReplicationAction.java:452)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.compress.NotXContentException: Compressor detection can only be called on some xcontent bytes or compressed xcontent bytes
+	at org.elasticsearch.common.compress.CompressorFactory.compressor(CompressorFactory.java:85)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:52)
+	at org.elasticsearch.index.mapper.DocumentParser.innerParseDocument(DocumentParser.java:95)
+	... 13 more
+[2015-11-03 23:38:17,047][INFO ][cluster.metadata         ] [Cain] [test] update_mapping [books]
+[2015-11-03 23:38:50,782][INFO ][rest.suppressed          ] /test/books Params: {index=test, type=books}
+java.lang.IllegalArgumentException: No feature for name [books]
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.fromName(GetIndexRequest.java:82)
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.convertToFeatures(GetIndexRequest.java:95)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:77)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
